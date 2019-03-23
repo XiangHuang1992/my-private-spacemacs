@@ -10,6 +10,12 @@
       (evil-insert 1)
     (evil-escape)))
 
+;;; init-exec-path-from-shell
+(defun init-exec-path-from-shell ()
+  (use-package exec-path-from-shell
+    :init
+    (when (memq window-system `(mac ns x))
+      (exec-path-from-shell-initialize))))
 ;;;; Evil
 
 (defun evil-execute-q-macro ()

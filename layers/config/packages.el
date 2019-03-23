@@ -18,11 +18,20 @@
         hierarchy
         outshine  ; also configures `outline-mode'
         s
-
+        exec-path-from-shell
         ;; Local Packages
         (redo-spacemacs :location local)))
 
 ;;; Unowned Packages
+
+;;; init-exec-path-from-shell
+(defun config/init-exec-path-from-shell ()
+  (use-package exec-path-from-shell
+    :init
+    (when (memq window-system `(mac ns x))
+      (exec-path-from-shell-initialize))))
+;;;;
+
 ;;;; Aggressive indent
 
 (defun config/pre-init-aggressive-indent ()

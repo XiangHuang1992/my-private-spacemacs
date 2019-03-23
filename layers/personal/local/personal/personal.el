@@ -1,6 +1,6 @@
 ;;; personal.el --- The random config dumping ground -*- lexical-binding: t; -*-
 
-(require 'mu4e)
+;;(require 'mu4e)
 
 (provide 'personal)
 
@@ -23,30 +23,30 @@
 ;;; Mail
 
 ;; message.el
-(setq message-directory "~/mail")
-(setq message-send-mail-function 'smtpmail-send-it)
+;; (setq message-directory "~/mail")
+;; (setq message-send-mail-function 'smtpmail-send-it)
 
 ;; smptmail.el
-(setq smtpmail-smtp-server "smtp.gmail.com")
-(setq smtpmail-smtp-service 587)
-(setq smtpmail-default-smtp-server "smtp.gmail.com")
-(setq smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil)))
-(setq smtpmail-auth-credentials '(("smtp.gmail.com" 587
-                                   "ekaschalk@gmail.com" nil)))
+;; (setq smtpmail-smtp-server "smtp.gmail.com")
+;; (setq smtpmail-smtp-service 587)
+;; (setq smtpmail-default-smtp-server "smtp.gmail.com")
+;; (setq smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil)))
+;; (setq smtpmail-auth-credentials '(("smtp.gmail.com" 587
+;;                                   "ekaschalk@gmail.com" nil)))
 
 ;; mu4e
 ;; solid
-(setq mu4e-get-mail-command "offlineimap")
-(setq mu4e-maildir "~/mail")
-(setq mu4e-sent-messages-behavior 'delete)
-(setq user-mail-address "ekaschalk@gmail.com")
-(setq mu4e-user-mail-address-list (list user-mail-address))
+;; (setq mu4e-get-mail-command "offlineimap")
+;;(setq mu4e-maildir "~/mail")
+;;(setq mu4e-sent-messages-behavior 'delete)
+;;(setq user-mail-address "ekaschalk@gmail.com")
+;;(setq mu4e-user-mail-address-list (list user-mail-address))
 
 ;; experiment
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
-(setq mu4e-maildir-shortcuts '(("/INBOX"               . ?i)
-                               ("/[Gmail].Sent Mail"   . ?s)))
+;;(setq mu4e-drafts-folder "/[Gmail].Drafts")
+;;(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
+;;(setq mu4e-maildir-shortcuts '(("/INBOX"               . ?i)
+ ;;                              ("/[Gmail].Sent Mail"   . ?s)))
 
 ;; mu4e-vars.el go through this
 
@@ -63,11 +63,11 @@
 
 ;;; Notate Development
 
-(require 'hierarchy)
-(add-to-list 'load-path "~/dev/virtual-indent/")
-(with-eval-after-load 'hl-todo
-  (setq hl-todo-keyword-faces
-        (--remove (s-equals? (car it) "NOTE") hl-todo-keyword-faces)))
-(require 'nt-dev)
-(load-file "~/dev/virtual-indent/test/test-helper.el")
-(setq find-function-C-source-directory "~/dev/emacs-dev/src/")
+;;(require 'hierarchy)
+;;(add-to-list 'load-path "~/dev/virtual-indent/")
+;;(with-eval-after-load 'hl-todo
+;;  (setq hl-todo-keyword-faces
+;;        (--remove (s-equals? (car it) "NOTE") hl-todo-keyword-faces)))
+;;(require 'nt-dev)
+;;(load-file "~/dev/virtual-indent/test/test-helper.el")
+;;(setq find-function-C-source-directory "~/dev/emacs-dev/src/")

@@ -1,8 +1,7 @@
 ;;; Personal Layer -*- lexical-binding: t; -*-
 
 (setq personal-packages
-      '((blog        :location local)
-        (outline-ivy :location local)
+      '((outline-ivy :location local)
         (personal    :location local)))
 
 ;;; Blog

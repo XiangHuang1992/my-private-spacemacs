@@ -39,17 +39,18 @@
    hy  ; I wrote this mode/layer, yay
    (python :variables
            python-test-runner 'pytest
-           python-spacemacs-indent-guess nil)
+           python-spacemacs-indent-guess nil
+           python-enable-yapf-format-on-save t
+           python-auto-set-local-pyenv-version nil)
 
-
-
+   elpy
    ;; Experimental/in-flux
-   (mu4e :variables
-         mu4e-installation-path       "/usr/local/share/emacs/site-lisp"
-         mu4e-use-maildirs-extension  t
+   ;;(mu4e :variables
+   ;;      mu4e-installation-path       "/usr/local/share/emacs/site-lisp"
+   ;;      mu4e-use-maildirs-extension  t
          ;; mu4e-enable-async-operations t
          ;; mu4e-spacemacs-layout-name "@Mu4e"
          ;; mu4e-spacemacs-layout-binding "m"
          ;; mu4e-spacemacs-kill-layout-on-exit t
-         )
+    ;;     )
    ))

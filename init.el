@@ -50,8 +50,8 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
                                     "operator mono medium"
                                   "Source Code Pro")
                                :size ,(if (= 1440 (display-pixel-height)) 20 18))
-   dotspacemacs-themes       '(solarized-light
-                               zenburn)
+   dotspacemacs-themes       '(zenburn
+                               solarized-light)
 
    ;; General
    dotspacemacs-auto-generate-layout-names t
@@ -91,7 +91,7 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
    dotspacemacs-excluded-packages
    '(;; Must Exclude (for styling, functionality, bug-fixing reasons)
      fringe importmagic scss-mode vi-tilde-fringe
-
+     all-the-icons spaceline spaceline-all-the-icons
      ;; Packages I don't use (non-exhaustive)
      anzu centered-cursor-mode column-enforce-mode company-statistics
      doom-modeline eshell-prompt-extras evil-anzu evil-mc evil-tutor
@@ -104,6 +104,10 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
   (fringe-mode 0)
+  (add-to-list 'configuration-layer-elpa-archives '("melpa-stable" . "stable.melpa.org/packages/"))
+  (add-to-list 'package-pinned-packages '(spaceline . "melpa-stable"))
+  (add-to-list 'package-pinned-packages '(spaceline-all-the-icons . "melpa-stable"))
+  (add-to-list 'package-pinned-packages '(all-the-icons . "melpa-stable"))
   (setq custom-file "~/.spacemacs.d/.custom-settings.el"))
 
 ;;;; Spacemacs/user-config
@@ -111,8 +115,8 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
 
 (defun dotspacemacs/user-config/post-layer-load-config ()
   "Configuration to take place *after all* layers/pkgs are instantiated."
-  (when (configuration-layer/package-used-p 'redo-spacemacs)
-    (redo-spacemacs-bindings))
+  ;;(when (configuration-layer/package-used-p 'redo-spacemacs)
+  ;;  (redo-spacemacs-bindings))
 
   ;; While toggling with `toggle-frame-fullscreen' works, I could not get
   ;; it to work as a hook attached to the frame-make or window-setup.
