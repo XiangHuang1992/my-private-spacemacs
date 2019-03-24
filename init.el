@@ -77,7 +77,7 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
    dotspacemacs-leader-key        "SPC"
    dotspacemacs-mode-line-theme   'all-the-icons))
 
-;;;; Spacemacs/layers
+;;;; Spacemacs/layer
 
 (defun dotspacemacs/layers ()
   "Instantiate Spacemacs layers declarations and package configurations."
@@ -99,7 +99,7 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
      live-py-mode multi-term multiple-cursors mwim neotree paradox py-isort
      yapfify)))
 
-;;;; Spacemacs/user-init
+;;;; Spacemacs/user-init        F
 
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
@@ -109,6 +109,7 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
   (add-to-list 'package-pinned-packages '(spaceline-all-the-icons . "melpa-stable"))
   (add-to-list 'package-pinned-packages '(all-the-icons . "melpa-stable"))
   (setq custom-file "~/.spacemacs.d/.custom-settings.el"))
+  (setq debug-on-error t)
 
 ;;;; Spacemacs/user-config
 ;;;;; Post Layer Load

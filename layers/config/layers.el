@@ -37,12 +37,6 @@
    emacs-lisp
    haskell
    hy  ; I wrote this mode/layer, yay
-   (python :variables
-           python-test-runner 'pytest
-           python-spacemacs-indent-guess nil
-           python-enable-yapf-format-on-save t
-           python-auto-set-local-pyenv-version nil)
-
    elpy
    ;; Experimental/in-flux
    ;;(mu4e :variables
