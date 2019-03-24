@@ -99,7 +99,7 @@ Check `dotspacemacs/get-variable-string-list' for all vars you can configure."
      live-py-mode multi-term multiple-cursors mwim neotree paradox py-isort
      yapfify)))
 
-;;;; Spacemacs/user-init        F
+;;;; Spacemacs/user-init
 
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."

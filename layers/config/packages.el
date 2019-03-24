@@ -10,7 +10,7 @@
         magit
         ob org org-bullets
         ranger
-
+        (python :location built-in)
         ;; Owned Packages
         auto-dim-other-buffers
         dash-functional
@@ -32,6 +32,17 @@
       (exec-path-from-shell-initialize))))
 ;;;;
 
+(defun congig/post-init-python ()
+  (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; if you use pyton3, then you could comment the following line
+  ;;(setq python-shell-interpreter "python"))
+  (add-hook 'python-mode-hook #'pipenv-mode)
+  (use-package pipenv
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended)))
 ;;;; Aggressive indent
 
 (defun config/pre-init-aggressive-indent ()
