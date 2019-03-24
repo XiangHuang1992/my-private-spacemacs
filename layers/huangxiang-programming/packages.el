@@ -187,12 +187,19 @@ Each entry is either:
 
 (defun huangxiang-programming/post-init-python ()
   (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  (add-hook 'python-mode-hook #'pipenv-mode)
   ;; if you use pyton3, then you could comment the following line
-  (setq python-shell-interpreter "python"))
+  ;;(setq python-shell-interpreter "python")
+  (use-package pipenv
+  :hook (python-mode . pipenv-mode)
+  :init
+  ;;(setq
+  ;;  pipenv-projectile-after-switch-function)
+  ))
 
 (defun huangxiang-programming/post-init-js-doc ()
-  (setq js-doc-mail-address "guanghui8827@gmail.com"
-        js-doc-author (format "Guanghui Qu <%s>" js-doc-mail-address)
+  (setq js-doc-mail-address "ferdinand@gmail.com"
+        js-doc-author (format "Huangxiang <%s>" js-doc-mail-address)
         js-doc-url "http://www.huangxiang.com"
         js-doc-license "MIT")
 

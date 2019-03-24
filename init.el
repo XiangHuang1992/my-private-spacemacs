@@ -86,6 +86,7 @@ This function should only modify configuration layer settings."
      ;; (ruby :variables ruby-version-manager 'chruby)
      ;; ruby-on-rails
      ;; lua
+     elpy
      html
      (javascript :variables javascript-backend 'nil)
      (typescript :variables
@@ -266,7 +267,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal)
 
@@ -408,7 +409,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
