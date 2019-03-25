@@ -249,6 +249,7 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
+                         zenburn
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -493,7 +494,7 @@ It should only modify the values of Spacemacs settings."
 This function defines the environment variables for your Emacs session. By
 default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
-See the header of this file for more information."
+See the header of this file for more informatiion."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
@@ -532,6 +533,7 @@ before packages are loaded."
   (setq evil-shift-round nil)
   (setq byte-compile-warnings '(not obsolete))
   (setq warning-minimum-level :error)
+  (setq debug-on-error t)
   ;; hack for remove purpose mode
   ;; (setq purpose-mode nil)
   )
